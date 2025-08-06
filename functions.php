@@ -1,7 +1,7 @@
 
 <?php
 
-function wppBPM_enqueue_scripts() {
+function wpBPM_enqueue_scripts() {
 
     wp_enqueue_style('style-css', get_stylesheet_uri());
 }
