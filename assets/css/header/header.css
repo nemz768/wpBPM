@@ -1,0 +1,64 @@
+
+.header {
+    background-color: transparent;
+    display: flex;
+}
+
+
+.header-container {
+    padding: 20px 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header-ul {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    column-gap: 33px;
+}
+
+.header-li {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+}
+
+.header-li-more {
+    column-gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.listBottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-title {
+    font-family: Halvar Breitschrift, sans-serif;
+    color: white;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+}
