@@ -14,9 +14,15 @@ Version: 1.0.0
     margin: 0;
 }
 
-
 body {
     background: #1E2C4C;
     background: radial-gradient(circle, rgba(30, 44, 76, 1) 0%, rgba(22, 26, 35, 1) 50%);
 }
 
+@font-face {
+    font-family: 'Share Tech Mono';
+    src: url('./assets/fonts/ShareTechMonoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
