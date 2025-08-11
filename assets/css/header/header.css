@@ -3,13 +3,13 @@
 .header {
     background: transparent;
     display: flex;
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    z-index: 10;
 }
 
 
 .header-container {
-    padding: 20px 20px 0;
+    padding: 20px 40px 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

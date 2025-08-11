@@ -1,45 +1,123 @@
-
 .hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    max-width: none;
     background-image: url('../../images/main/main-picture.png');
-    background-size: cover;
     background-repeat: no-repeat;
     mix-blend-mode: color-dodge;
     z-index: 0;
+    background-position: 65% 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0 40px;
+    min-height: 100vh;
 
 }
 
-header,
-.hero-content {
-    position: relative;
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
-/* Экраны меньше 1024px */
+.hero-title {
+    font-family: Halvar Breitschrift, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: clamp(50px, 8vw, 120px);
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-wrap: wrap;
+
+}
+
+
+.hero-subtitle {
+    font-family: Share Tech Mono, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+    vertical-align: middle;
+    color: #FFFFFF;
+    max-width: 600px;
+    width: auto;
+}
+
+.hero-button {
+    width: 516px;
+    height: 56px;
+    background-color: #1F2CBE;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 30px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-family: Share Tech Mono, monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    transition: .8s;
+}
+
+.hero-button:hover {
+    background-color: #fff;
+    color: #161A23;
+    transition: .8s;
+}
+
+
+
 @media (max-width: 1024px) {
     .hero {
-        transform: translateY(20px);
+        background-size: cover;
         background-position: 35% 70%;
     }
 }
 
-/* Экраны меньше 640px */
+
 @media (max-width: 640px) {
     .hero {
         background-image: url('../../images/main/main-picture-normal.png');
-        transform: translateY(30px);
+        background-size: cover;
         background-position: 32% 70%;
+        padding: 50px 10px 0;
+        justify-content: center;
     }
+
+    .hero-button {
+            width: clamp(300px, 60vw, 390px);
+        }
+    .hero-title {
+     font-size: clamp(35px, 8vw, 50px);
+    }
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
 }
 
-/* Экраны меньше 360px */
+
 @media (max-width: 360px) {
     .hero {
         background-image: url('../../images/main/main-picture-sm.png');
-        transform: translateY(40px);
+        background-size: cover;
         background-position: 28% 75%;
+        padding: 120px 10px 0;
+    }
+    .hero-title {
+        font-size: 30px;
+    }
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    .hero-button {
+        width: clamp(300px, 6vw, 340px);
     }
 }
