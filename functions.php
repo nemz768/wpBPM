@@ -23,7 +23,7 @@ add_action("after_setup_theme", "wpBPM_custom_header_setup");
 function wpBPM_enqueue_scripts() {
      wp_enqueue_style('style-css', get_stylesheet_uri());
      wp_enqueue_style('header-css', get_stylesheet_directory_uri() . '/assets/css/header/header.css');
-
+      wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/assets/css/main/main.css');
      wp_enqueue_script('header-burger-menu-js',get_template_directory_uri() . '/assets/js/header-burger-menu.js');
 }
 

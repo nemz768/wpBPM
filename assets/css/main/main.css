@@ -1,0 +1,45 @@
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../images/main/main-picture.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-dodge;
+    z-index: 0;
+
+}
+
+header,
+.hero-content {
+    position: relative;
+}
+
+/* Экраны меньше 1024px */
+@media (max-width: 1024px) {
+    .hero {
+        transform: translateY(20px);
+        background-position: 35% 70%;
+    }
+}
+
+/* Экраны меньше 640px */
+@media (max-width: 640px) {
+    .hero {
+        background-image: url('../../images/main/main-picture-normal.png');
+        transform: translateY(30px);
+        background-position: 32% 70%;
+    }
+}
+
+/* Экраны меньше 360px */
+@media (max-width: 360px) {
+    .hero {
+        background-image: url('../../images/main/main-picture-sm.png');
+        transform: translateY(40px);
+        background-position: 28% 75%;
+    }
+}
