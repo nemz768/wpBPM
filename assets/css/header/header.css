@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 .header {
-    background-color: transparent;
+    background: transparent;
     display: flex;
+    position: fixed;
+    z-index: 10;
 }
 
 
 .header-container {
-    padding: 20px 40px 0;
+    padding: 20px 40px 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,41 +18,8 @@
     box-sizing: border-box;
 }
 
-.header-ul {
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-    column-gap: 33px;
-}
 
-.header-li {
-    font-family: 'Share Tech Mono', monospace;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0;
-    text-transform: uppercase;
-}
-
-.header-link {
-    color: white;
-    text-decoration: none;
-}
-
-.header-li-more {
-    column-gap: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.listBottom {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 
 .header-title {
     font-family: Halvar Breitschrift, sans-serif;
@@ -60,5 +30,84 @@
     line-height: 100%;
     letter-spacing: 0;
     text-transform: uppercase;
+
+}
+
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    list-style: none;
+}
+
+
+.header-menu__text {
+    display: flex;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+
+.burger-menu-btn {
+    display: none;
+    flex-direction: column;
+    row-gap: 4px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    z-index: 3;
+}
+
+.burger-menu-line {
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+.burger-nav {
+    display: none;
+    padding: 20px 20px 0;
+    background: #161A23;
+}
+
+
+.activeNavBar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header-burger-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px 0 10px 10px;
+}
+
+@media (max-width: 660px) {
+    .header-navbar {
+        display: none;
+    }
+
+    .burger-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 }

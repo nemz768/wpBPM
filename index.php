@@ -1,6 +1,8 @@
 
     <?php get_header()?>
+    <?php get_template_part('./template-parts/main-section')?>
+
 
     <?php get_template_part('template-parts/how-it-works'); ?>
 
-    <?php get_footer()?>
+     <?php get_footer()?>
