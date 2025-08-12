@@ -28,6 +28,10 @@ function wpBPM_enqueue_scripts() {
           get_stylesheet_directory_uri() . '/assets/css/blocks/how-it-works.css'
      );
       wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/assets/css/main/main.css');
+      wp_enqueue_style(
+               'footer-css',
+                get_stylesheet_directory_uri() . '/assets/css/footer/footer.css'
+           );
      wp_enqueue_script('header-burger-menu-js',get_template_directory_uri() . '/assets/js/header-burger-menu.js');
 }
 

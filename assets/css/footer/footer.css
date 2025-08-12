@@ -1,0 +1,106 @@
+.footer {
+    width: 100vw;
+    height: 302px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #1E2C4C;
+    column-gap: 250px;
+}
+
+.footer-rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+.footer-rules-title {
+    font-family: Halvar Breitschrift, sans-serif;
+    color: white;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.footer-rules-subtitle {
+    font-family: Halvar Breitschrift, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+}
+
+.footer-address-links-email-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: calc(100vw - 300px - 80px);
+}
+
+.footer-address-links-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.footer-address-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-width: 290px;
+    flex-shrink: 0;
+    margin-right: 600px;
+}
+
+.footer-address-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0;
+}
+
+.footer-links-block {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    flex-shrink: 0;
+}
+
+.footer-link-img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.footer-email {
+    font-family: Halvar Breitschrift, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: clamp(50px, 12vw, 115px);
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 20px;
+    max-width: 100%;
+    word-break: break-word;
+}
+
