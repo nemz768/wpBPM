@@ -7,15 +7,14 @@
     justify-content: space-between;
     background: #1E2C4C;
     column-gap: 250px;
+
 }
 
 .footer-rules {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    max-width: 300px;
-    flex-shrink: 0;
+    max-height: 100vw;
 }
 
 .footer-rules-title {
@@ -63,7 +62,12 @@
     row-gap: 10px;
     max-width: 290px;
     flex-shrink: 0;
-    margin-right: 600px;
+    margin-right: clamp(100px, 4vw, 600px);
+}
+
+
+.footer-rules-subtitle-mobile {
+    display: none;
 }
 
 .footer-address-text {
@@ -94,7 +98,7 @@
     font-family: Halvar Breitschrift, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: clamp(50px, 12vw, 115px);
+    font-size: clamp(33px, 3vw, 115px);
     line-height: 100%;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -102,5 +106,159 @@
     margin-top: 20px;
     max-width: 100%;
     word-break: break-word;
+}
+
+
+
+@media (max-width: 1260px) {
+    .footer-address-links-block {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 5px;
+    }
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 30px;
+        column-gap: clamp(20px, 4vw, 200px);
+        height: auto;
+    }
+
+    .footer-rules-title {
+        font-size: 32px;
+    }
+    .footer-address-links-block {
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: flex-start;
+    }
+
+    .footer-rules-subtitle {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .footer-address-text {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .footer-link-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-email {
+        font-size: clamp(25px, 4vw, 60px)
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: 10px;
+        column-gap: 20px;
+        height: auto;
+        overflow-wrap: break-word;
+        justify-content: flex-start;
+    }
+
+    .footer-rules-title {
+        font-size: 24px;
+        white-space: nowrap;
+    }
+
+    .footer-address-links-email-block {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    .footer-rules-subtitle {
+        font-size: 12px;
+        letter-spacing: 1px;
+        white-space: normal;
+        word-break: break-word;
+        max-width: 150px;
+        margin: 0;
+    }
+
+    .footer-address-text {
+        font-size: 12px;
+        letter-spacing: 1px;
+        white-space: normal;
+        word-break: break-word;
+        max-width: 100%;
+    }
+
+    .footer-link-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-email {
+        font-size: clamp(22px, 6vw, 50px);
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .footer {
+        flex-direction: column;
+        padding: 15px;
+        row-gap: 15px;
+    }
+
+    .footer-rules-title {
+        font-size: 22px;
+    }
+
+    .footer-rules-subtitle {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-address-block {
+        margin-right: 20px;
+    }
+
+    .footer-address-text {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-link-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-email {
+        font-size: clamp(22px, 7vw, 50px);
+    }
+    
+    .footer-rules-subtitle {
+        display: none;
+    }
+    
+    .footer-rules-subtitle-mobile {
+        display: block;
+        font-family: Halvar Breitschrift, sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: white;
+        margin: 0;
+    }
+
+    .footer-email-block-mobile {
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+    }
 }
 

@@ -24,9 +24,11 @@
         </div>
 
         </div>
-               <h2 class="footer-email">info@bpmlab.ru</h2>
+    <div class="footer-email-block-mobile">
+         <h2 class="footer-email">info@bpmlab.ru</h2>
+         <p class="footer-rules-subtitle-mobile">© 2025 BPMLAB. все права защищены.</p>
     </div>
-
+    </div>
 
  </footer>
 
