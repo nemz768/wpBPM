@@ -1,0 +1,45 @@
+
+.step-conteiner {
+    margin-top: 100px;
+}
+
+.how-it-works, h2 {
+    font-family: 'Halvar Breitschrift', sans-serif;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.how-it-works .steps {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.how-it-works .step {
+    flex: 1;
+    padding: 20px;
+    color: #9BACFF;
+}
+
+.how-it-works .step h3 {
+    font-size: 40px;
+    line-height: 100%;
+    font-weight: 400;
+    
+    /* height: 81px;
+    width: 81px;
+    border-radius: 50%; */
+}
+
+.how-it-works .step p {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 100%;
+}
