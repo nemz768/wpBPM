@@ -1,0 +1,76 @@
+/* О нас в цифрах, заголовок */
+.conteiner_about_us {
+    margin-top: 100px;
+}
+
+h2 {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+/* Сетка для карточек */
+.about_us_in_numbers {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: left;
+    margin-left: 590px; 
+    gap: 15px;
+}
+
+
+.item_1_numbers h3 {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    font-size: 140px;
+    /* width: 600px;
+    height: 127px; */
+    color: #4D6291;
+    line-height: 70%;
+    font-weight: 800;
+    font-style: oblique;
+    text-transform: uppercase;
+}
+
+.item_1_numbers h4,
+.item_2_numbers h4,
+.item_3_numbers h4 {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    font-size: 25px;
+    color: #FFFFFF;
+    line-height: 100%;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.item_1_numbers p,
+.item_2_numbers p,
+.item_3_numbers p {
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.item_2_numbers h3 {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    font-size: 140px;
+    color: #6A7EAC;
+    line-height: 70%;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+
+.item_3_numbers h3 {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    font-size: 140px;
+    color: #869BCA;
+    line-height: 70%;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
