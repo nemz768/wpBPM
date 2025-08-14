@@ -1,10 +1,18 @@
-
-.step-conteiner {
-    margin-top: 100px;
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+.step-container {
+    padding: 50px;
 }
 
 .how-it-works, h2 {
-    font-family: 'Halvar Breitschrift', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
 }
 
 h2 {
@@ -13,33 +21,231 @@ h2 {
     font-size: 20px;
     line-height: 100%;
     text-transform: uppercase;
+    margin: 0;
 }
+
+.read-more {
+    color: #ffffff;
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: right;
+    font-weight: 400;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.mobile-read-more {
+    display: none;
+}
+
 
 .how-it-works .steps {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     justify-content: space-between;
+    position: relative;
+    color: #9BACFF;
+}
+
+/* Пунктирная линия с градиентом на всю длину */
+.how-it-works .steps::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    right: 0;
+    top: 40px;
+    height: 2px;
+    background: 
+        linear-gradient(to right, 
+            rgba(255, 255, 255, 0.2), 
+            rgba(255, 255, 255, 1)
+        ),
+        repeating-linear-gradient(to right,
+            transparent 0,
+            transparent 4px,
+            #161A23 4px,
+            #161A23 8px
+        );
+    background-blend-mode: overlay;
+    z-index: 1;
+    opacity: 0.6;
 }
 
 .how-it-works .step {
     flex: 1;
-    padding: 20px;
-    color: #9BACFF;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
 }
 
-.how-it-works .step h3 {
-    font-size: 40px;
-    line-height: 100%;
-    font-weight: 400;
-    
-    /* height: 81px;
+/* Базовые стили для кружков */
+.how-it-works .step-number {
     width: 81px;
-    border-radius: 50%; */
+    height: 81px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    background: #161A23;
+    z-index: 3;
 }
+
+.how-it-works .step-number::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    opacity: 0.25;
+}
+
+.how-it-works .step-number::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 255, 255, 0.34) 0%, 
+        rgba(255, 255, 255, 0.7) 52%, 
+        rgba(255, 255, 255, 0.34) 100%
+    );
+    border-radius: 50%;
+}
+
+.how-it-works .step:nth-child(1) .step-number::after { opacity: 0.20; }
+.how-it-works .step:nth-child(2) .step-number::after { opacity: 0.30; }
+.how-it-works .step:nth-child(3) .step-number::after { opacity: 0.40; }
+.how-it-works .step:nth-child(4) .step-number::after { opacity: 0.50; }
+.how-it-works .step:nth-child(5) .step-number::after { opacity: 0.60; }
+.how-it-works .step:nth-child(6) .step-number::after { opacity: 0.70; }
 
 .how-it-works .step p {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 20px;
     line-height: 100%;
+}
+
+/* Вертикальная адаптация для мобильных устройств */
+@media (max-width: 1500px) {
+    .step-container {
+        padding: 40px;
+    }
+}
+/* Вертикальная адаптация для мобильных устройств */
+@media (max-width: 1400px) {
+    .how-it-works .steps {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    
+    .how-it-works .steps::after {
+        /* Вертикальная пунктирная линия */
+        width: 2px;
+        height: calc(100% - 81px);
+        left: 40px;
+        top: 81px;
+        right: auto;
+        background: 
+            linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0.2), 
+                rgba(255, 255, 255, 1)
+            ),
+            repeating-linear-gradient(to bottom,
+                transparent 0,
+                transparent 4px,
+                #161A23 4px,
+                #161A23 8px
+            );
+    }
+    
+    .how-it-works .step {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .how-it-works .step-number {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    
+    .how-it-works .step p {
+        margin-top: 0;
+        text-align: left;
+    }
+    
+    /* Адаптация заголовка и ссылки */
+    h2 {
+        font-size: 18px;
+    }
+    .read-more {
+        align-self: flex-start;
+    }
+    .header-row {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 700px) {
+    h2 {
+        width: 200px;
+    }
+    .read-more {
+        width: 250px;
+    }
+}
+/* Вертикальная адаптация для мобильных устройств */
+@media (max-width: 640px) {
+    .step-container {
+        padding: 10px;
+    }
+    .how-it-works .step p {
+        font-size: 18px;
+        max-width: 470px;
+    }
+}
+@media (max-width: 485px) {
+    h2 {
+        width: 400px;
+    }
+    /* Перенос ссылки "Подробнее" в самый низ */
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .header-row .read-more {
+        display: none; 
+    }
+    
+    /* Новая ссылка внизу */
+    .how-it-works::after {
+        content: '';
+        display: block;
+        margin-top: 40px;
+    }
+    
+    .mobile-read-more {
+        display: block;
+        color: #ffffff;
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+        width: 100%;
+    }
 }
