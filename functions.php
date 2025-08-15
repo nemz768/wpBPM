@@ -16,9 +16,12 @@ function wpBPM_custom_header_setup() {
             ));
 }
 
+
+
 add_theme_support('title-tag');
 
 add_action("after_setup_theme", "wpBPM_custom_header_setup");
+
 
 function wpBPM_enqueue_scripts() {
      wp_enqueue_style('style-css', get_stylesheet_uri());
