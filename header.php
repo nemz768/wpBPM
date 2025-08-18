@@ -39,7 +39,7 @@ if ($links_group && is_array($links_group)):
 
         <?php if (!empty($link["menu-submenu"]) && is_array($link["menu-submenu"])): ?>
             <div class="menu-submenu">
-                <ul>
+                <ul class="submenu-list">
                     <?php foreach($link["menu-submenu"] as $submenu): ?>
                         <li>
                             <a href="<?php echo esc_url($submenu['menu-submenu-url']); ?>">
@@ -56,7 +56,6 @@ if ($links_group && is_array($links_group)):
 endif;
 ?>
 </nav>
-
 
               <button id="burger-menu-btn" class="burger-menu-btn">
                        <div class="burger-menu-line"></div>
@@ -79,34 +78,41 @@ endif;
                                    </div>
 
                                <div class="header-burger-menu">
-                                     <?php
-                                                 $links_group = get_field("header_menu_links");
-                                                  if ($links_group && is_array($links_group)):
-                                                  foreach($links_group as $link):
-                                                    ?>
+                              <?php
+                              $links_group = get_field("header_menu_links");
+                              if ($links_group && is_array($links_group)):
+                                  foreach ($links_group as $link):
+                              ?>
+                                  <div class="header-menu-item">
+                                      <a href="<?php echo esc_url($link['menu_item_url']); ?>" class="header-menu__text">
+                                          <?php echo esc_html($link["menu_item_label"]); ?>
+                                          <span><?php echo $link["menu_link_svg"]; ?></span>
+                                      </a>
 
-                                                           <a target="_blank" href="<?php echo esc_url($link['menu_item_url']); ?>" class="header-menu__text">
-                                                           <?php echo esc_html($link["menu_item_label"]);?>
-                                                             <span>
-                                                              <?php echo $link["menu_link_svg"];?>
-                                                             </span>
-                                                           </a>
-
-                                                        <?php
-                                                        endforeach;
-                                                        endif;
-                                             ?>
+                                      <?php if (!empty($link["menu-submenu"]) && is_array($link["menu-submenu"])): ?>
+                                          <div class="menu-submenu">
+                                              <ul class="submenu-list">
+                                                  <?php foreach($link["menu-submenu"] as $submenu): ?>
+                                                      <li>
+                                                          <a href="<?php echo esc_url($submenu['menu-submenu-url']); ?>">
+                                                              <?php echo esc_html($submenu["menu-submenu-text"]); ?>
+                                                          </a>
+                                                      </li>
+                                                  <?php endforeach; ?>
+                                              </ul>
+                                          </div>
+                                      <?php endif; ?>
+                                  </div>
+                              <?php
+                                  endforeach;
+                              endif;
+                              ?>
                                </div>
                    </nav>
 
 
 
        </div>
-
- <nav>
-</nav>
-
-
 
  </header>
 

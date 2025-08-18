@@ -13,10 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             if (submenu.style.display === 'none') {
-                submenu.style.display = 'block';
+                submenu.style.display = 'flex';
             } else {
                 submenu.style.display = 'none';
             }
         });
     });
 });
+
+
+
