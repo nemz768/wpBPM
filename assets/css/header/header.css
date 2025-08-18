@@ -113,6 +113,11 @@
 
 
 
+.menu-submenu {
+    display: none;
+}
+
+
 @media (max-width: 660px) {
     .header-navbar {
         display: none;

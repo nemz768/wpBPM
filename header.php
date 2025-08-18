@@ -19,34 +19,44 @@
                         if ($field):
                        echo esc_html($field);
                         endif;
-
                    ?>
                   </a>
                 </h1>
              </div>
 
 
-              <nav class="header-menu header-navbar">
-            <?php
-              $links_group = get_field("header_menu_links");
-               if ($links_group && is_array($links_group)):
-               foreach($links_group as $link):
-                 ?>
+<nav class="header-menu header-navbar">
+<?php
+$links_group = get_field("header_menu_links");
+if ($links_group && is_array($links_group)):
+    foreach ($links_group as $link):
+?>
+    <div class="header-menu-item">
+        <a href="<?php echo esc_url($link['menu_item_url']); ?>" class="header-menu__text">
+            <?php echo esc_html($link["menu_item_label"]); ?>
+            <span><?php echo $link["menu_link_svg"]; ?></span>
+        </a>
 
-                        <a target="_blank" href="<?php echo esc_url($link['menu_item_url']); ?>" class="header-menu__text">
-                        <?php echo esc_html($link["menu_item_label"]);?>
-                        <span>
-                        <?php echo $link["menu_link_svg"];?>
-                        </span>
-                        </a>
+        <?php if (!empty($link["menu-submenu"]) && is_array($link["menu-submenu"])): ?>
+            <div class="menu-submenu">
+                <ul>
+                    <?php foreach($link["menu-submenu"] as $submenu): ?>
+                        <li>
+                            <a href="<?php echo esc_url($submenu['menu-submenu-url']); ?>">
+                                <?php echo esc_html($submenu["menu-submenu-text"]); ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+    </div>
+<?php
+    endforeach;
+endif;
+?>
+</nav>
 
-                        <?php
-                          endforeach;
-                         endif;
-
-                        ?>
-
-                   </nav>
 
               <button id="burger-menu-btn" class="burger-menu-btn">
                        <div class="burger-menu-line"></div>
@@ -82,16 +92,19 @@
                                                              </span>
                                                            </a>
 
-                                                           <?php
-                                                             endforeach;
-                                                            endif;
+                                                        <?php
+                                                        endforeach;
+                                                        endif;
                                              ?>
                                </div>
                    </nav>
 
+
+
        </div>
 
-
+ <nav>
+</nav>
 
 
 

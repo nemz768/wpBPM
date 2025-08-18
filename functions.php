@@ -22,6 +22,7 @@ function wpBPM_enqueue_scripts() {
            );
      wp_enqueue_script('header-scroll-effect-js',get_template_directory_uri() . '/assets/js/header/header-scroll-effect.js');
      wp_enqueue_script('header-burger-menu-js',get_template_directory_uri() . '/assets/js/header/header-burger-menu.js');
+     wp_enqueue_script('header-submenu-js',get_template_directory_uri() . '/assets/js/header/header-submenu.js');
 }
 
 add_action('wp_enqueue_scripts', 'wpBPM_enqueue_scripts');
