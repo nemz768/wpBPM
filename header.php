@@ -34,7 +34,7 @@ if ($links_group && is_array($links_group)):
     <div class="header-menu-item">
         <a href="<?php echo esc_url($link['menu_item_url']); ?>" class="header-menu__text">
             <?php echo esc_html($link["menu_item_label"]); ?>
-            <span><?php echo $link["menu_link_svg"]; ?></span>
+            <span class="header-menu-item-svg"><?php echo $link["menu_link_svg"]; ?></span>
         </a>
 
         <?php if (!empty($link["menu-submenu"]) && is_array($link["menu-submenu"])): ?>
@@ -86,7 +86,7 @@ endif;
                                   <div class="header-menu-item">
                                       <a href="<?php echo esc_url($link['menu_item_url']); ?>" class="header-menu__text">
                                           <?php echo esc_html($link["menu_item_label"]); ?>
-                                          <span><?php echo $link["menu_link_svg"]; ?></span>
+                                          <span class="header-menu-item-svg"><?php echo $link["menu_link_svg"]; ?></span>
                                       </a>
 
                                       <?php if (!empty($link["menu-submenu"]) && is_array($link["menu-submenu"])): ?>

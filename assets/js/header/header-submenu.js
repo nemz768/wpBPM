@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuItems.forEach(item => {
         const submenu = item.querySelector('.menu-submenu');
+        const menuSvg = item.querySelector('.header-menu-item-svg');
         if (!submenu) return;
 
         submenu.style.display = 'none';
+        menuSvg.style.transform = 'rotate(0)';
 
         const link = item.querySelector('a.header-menu__text');
         if (!link) return;
@@ -14,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             if (submenu.style.display === 'none') {
                 submenu.style.display = 'flex';
+                menuSvg.style.transform = 'rotate(180deg)';
             } else {
                 submenu.style.display = 'none';
+                menuSvg.style.transform = 'rotate(0)';
             }
         });
     });
