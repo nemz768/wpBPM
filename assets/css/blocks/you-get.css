@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+
+.get-container {
+    padding: 50px;
+}
+
+.get-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.get-header {
+    flex: 1;
+}
+
+.get-content {
+    flex: 2; 
+}
+
+.get-container h2 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin: 0;
+    position: sticky;
+    top: 20px;
+}
+
+.you-get-text {
+    font-family: 'Rajdhani', sans-serif;
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.benefit-item {
+    margin-bottom: 60px;
+}
+
+.get-container h3 {
+    font-family: 'Share Tech Mono', monospace;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    margin-bottom: 20px;
+}
+
+.get-container ul {
+    font-family: 'Share Tech Mono', monospace;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.04em;
+    line-height: 120%;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.get-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .get-wrapper {
+        flex-direction: column;
+    }
+    .get-header,
+    .get-content {
+        max-width: 100%;
+    }
+    .you-get-text {
+        font-size: 30px;
+    }
+}
