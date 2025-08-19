@@ -1,12 +1,11 @@
 <?php wp_footer(); ?>
 
+
 <footer class="footer">
     <div class="footer-rules">
         <h1 class="footer-rules-title">BPMlab</h1>
         <p class="footer-rules-subtitle">© 2025 BPMLAB. все права защищены.</p>
     </div>
-
-
 
     <div class="footer-address-links-email-block">
     <div class="footer-address-links-block">
@@ -33,4 +32,5 @@
  </footer>
 
 </body>
+
 </html>
