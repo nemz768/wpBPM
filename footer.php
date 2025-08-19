@@ -1,36 +1,79 @@
 <?php wp_footer(); ?>
 
+
 <footer class="footer">
     <div class="footer-rules">
-        <h1 class="footer-rules-title">BPMlab</h1>
-        <p class="footer-rules-subtitle">© 2025 BPMLAB. все права защищены.</p>
+
+        <?php $logo = get_field("footer-logo");
+              $copyright = get_field("footer-copyright");
+         if ($logo):
+        ?>
+
+        <h1 class="footer-rules-title"><?php echo esc_html($logo);?></h1>
+
+        <?php
+        endif;
+          if ($copyright):
+        ?>
+        <p class="footer-rules-subtitle"><?php echo esc_html($copyright);?></p>
+
+        <?php
+        endif;
+
+        ?>
+
+
     </div>
-
-
 
     <div class="footer-address-links-email-block">
     <div class="footer-address-links-block">
         <div class="footer-address-block">
-            <p class="footer-address-text">630090, г. Новосибирск, пр-т Академика Лаврентьева 6/1, офис 909-924</p>
-            <p class="footer-address-text">+7 (383) 363 18 01</p>
+            <?php
+            $info_group = get_field("footer-repeater-info");
+
+            if ($info_group && is_array($info_group)):
+            foreach($info_group as $info_item):
+            ?>
+            <p class="footer-address-text"><?php echo esc_html($info_item["footer-info-text"]);?></p>
+
+            <?php
+            endforeach;
+            endif;
+            ?>
         </div>
 
 
-        <div class="footer-links-block">
-            <a href="#"><img class="footer-link-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/wp-footer-socials-tg.png" alt="socialMediaLogoTg"/></a>
-            <a href="#"><img class="footer-link-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/wp-footer-socials-dzen.png" alt="socialMediaLogoDzen"/></a>
-            <a href="#"><img class="footer-link-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/wp-footer-socials-vcRu.png" alt="socialMediaLogoVcRu"/></a>
-            <a href="#"><img class="footer-link-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer/wp-footer-socials-habr.png" alt="socialMediaLogoHabr"/></a>
-        </div>
+       <div class="footer-links-block">
+       <?php
+       $social_group = get_field("footer-repeater-socials");
 
+       if ($social_group && is_array($social_group)):
+       foreach($social_group as $social):
+
+       ?>
+            <a href="<?php echo esc_url($social['footer-socials-url']);?>"><img class="footer-link-img" src="<?php echo esc_url($social['footer-socials-img']);?>" alt=""></a>
+
+        <?php
+        endforeach;
+        endif;
+
+
+        ?>
         </div>
-    <div class="footer-email-block-mobile">
-         <h2 class="footer-email">info@bpmlab.ru</h2>
-         <p class="footer-rules-subtitle-mobile">© 2025 BPMLAB. все права защищены.</p>
     </div>
-    </div>
+
+    <?php
+    $email = get_field("footer-email");
+    if ($email):
+
+    ?>
+     <h2 class="footer-email"><?php echo esc_html($email);?></h2>
+     <?php
+     endif;
+     ?>
 
  </footer>
 
 </body>
+
 </html>

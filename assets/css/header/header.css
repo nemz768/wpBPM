@@ -5,8 +5,15 @@
     display: flex;
     position: fixed;
     z-index: 10;
+    transition: background-color 0.3s ease;
+    padding: 0 0 10px;
 }
 
+
+.header.scrolled {
+    transition: background-color 0.3s ease;
+    background: rgba(0, 0, 0, 0.8);
+}
 
 .header-container {
     padding: 20px 40px 0 20px;
@@ -17,9 +24,6 @@
     align-items: center;
     box-sizing: border-box;
 }
-
-
-
 
 .header-title {
     font-family: Halvar Breitschrift, sans-serif;
@@ -44,14 +48,22 @@
 
 .header-menu__text {
     display: flex;
+    align-items: center;
+    column-gap: 10px;
     font-family: 'Share Tech Mono', monospace;
     font-weight: 400;
-    font-style: normal;
     font-size: 16px;
     text-transform: uppercase;
     color: white;
+    text-decoration: none;
+}
+
+.header-menu__text span {
+    display: flex;
     align-items: center;
 }
+
+
 
 .header a {
     text-decoration: none;
@@ -98,6 +110,62 @@
     row-gap: 10px;
     padding: 10px 0 10px 10px;
 }
+.header-menu-item {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-submenu {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    min-width: 220px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* чтобы не мешало */
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header-menu-item:hover > .menu-submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.submenu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu-list li {
+    margin: 0;
+}
+
+.submenu-list a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Share Tech Mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100%;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.submenu-list a:hover {
+    background-color: #333;
+}
 
 @media (max-width: 660px) {
     .header-navbar {
@@ -110,4 +178,34 @@
         justify-content: center;
     }
 
+    .header-menu-item {
+        display: block; /* вместо inline-block */
+        width: 100%;   /* растянуть по ширине */
+    }
+
+    .menu-submenu {
+        position: static;
+        transform: none!important;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 5px 0;
+        background: transparent;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .submenu-list {
+        width: 100%;
+    }
+
+    .submenu-list a {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
 }
+
