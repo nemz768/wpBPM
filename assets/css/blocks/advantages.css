@@ -93,11 +93,11 @@
   counter-reset: item;
   list-style-type: none;
 }
-li { 
+.conteiner_advantage .reasons li { 
   display: block;
 }
 
-li:before { 
+.conteiner_advantage .reasons li:before { 
     float: right;
     display: block;
     content: counter(item, decimal-leading-zero) " "; 
@@ -180,18 +180,18 @@ li:before {
         margin: 15px;
     }
 
-    ol { 
+    .conteiner_advantage .reasons ol { 
     margin: 0;
     padding: 0;
     counter-reset: item;
     list-style-type: none;
     }
 
-    li { 
+    .conteiner_advantage .reasons li { 
     display: block;
     }
 
-    li:before { 
+    .conteiner_advantage .reasons li:before { 
         float: right;
         display: block;
         content: counter(item, decimal-leading-zero) " "; 
@@ -254,18 +254,18 @@ li:before {
         margin: 12px;
     }
 
-    ol { 
+    .conteiner_advantage .reasons ol { 
     margin: 0;
     padding: 0;
     counter-reset: item;
     list-style-type: none;
     }
 
-    li { 
+    .conteiner_advantage .reasons li { 
     display: block;
     }
 
-    li:before { 
+    .conteiner_advantage .reasons li:before { 
         float: right;
         display: block;
         content: counter(item, decimal-leading-zero) " "; 
