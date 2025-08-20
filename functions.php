@@ -15,6 +15,10 @@ function wpBPM_enqueue_scripts() {
           'how-it-works-css',
           get_stylesheet_directory_uri() . '/assets/css/blocks/how-it-works.css'
      );
+     wp_enqueue_style(
+          'you-get-css',
+          get_stylesheet_directory_uri() . '/assets/css/blocks/you-get.css'
+     );
       wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/assets/css/main/main.css');
       wp_enqueue_style(
                'footer-css',

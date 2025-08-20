@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+
 .step-container {
     padding: 50px;
 }
 
-.how-it-works, h2 {
+.how-it-works, .header-row h2 {
     font-family: 'Rajdhani', sans-serif;
 }
 
@@ -15,7 +16,7 @@
     margin-bottom: 60px;
 }
 
-h2 {
+.header-row h2 {
     color: #FFFFFF;
     font-weight: 800;
     font-size: 20px;
@@ -48,7 +49,6 @@ h2 {
     color: #9BACFF;
 }
 
-/* Пунктирная линия с градиентом на всю длину */
 .how-it-works .steps::after {
     content: '';
     position: absolute;
@@ -133,22 +133,19 @@ h2 {
     line-height: 100%;
 }
 
-/* Вертикальная адаптация для мобильных устройств */
 @media (max-width: 1500px) {
     .step-container {
         padding: 40px;
     }
 }
-/* Вертикальная адаптация для мобильных устройств */
+
 @media (max-width: 1400px) {
     .how-it-works .steps {
         flex-direction: column;
         gap: 30px;
         align-items: flex-start;
     }
-    
     .how-it-works .steps::after {
-        /* Вертикальная пунктирная линия */
         width: 2px;
         height: calc(100% - 81px);
         left: 40px;
@@ -166,26 +163,21 @@ h2 {
                 #161A23 8px
             );
     }
-    
     .how-it-works .step {
         flex-direction: row;
         align-items: center;
         gap: 20px;
         width: 100%;
     }
-    
     .how-it-works .step-number {
         margin-bottom: 0;
         flex-shrink: 0;
     }
-    
     .how-it-works .step p {
         margin-top: 0;
         text-align: left;
     }
-    
-    /* Адаптация заголовка и ссылки */
-    h2 {
+    .header-row h2 {
         font-size: 18px;
     }
     .read-more {
@@ -195,15 +187,16 @@ h2 {
         margin-bottom: 20px;
     }
 }
+
 @media (max-width: 700px) {
-    h2 {
+    .header-row h2 {
         width: 200px;
     }
     .read-more {
         width: 250px;
     }
 }
-/* Вертикальная адаптация для мобильных устройств */
+
 @media (max-width: 640px) {
     .step-container {
         padding: 10px;
@@ -213,29 +206,25 @@ h2 {
         max-width: 470px;
     }
 }
+
 @media (max-width: 485px) {
-    h2 {
+    .header-row h2 {
         width: 400px;
     }
-    /* Перенос ссылки "Подробнее" в самый низ */
     .header-row {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
         margin-bottom: 30px;
     }
-    
     .header-row .read-more {
         display: none; 
     }
-    
-    /* Новая ссылка внизу */
     .how-it-works::after {
         content: '';
         display: block;
         margin-top: 40px;
     }
-    
     .mobile-read-more {
         display: block;
         color: #ffffff;
