@@ -1,3 +1,8 @@
+<?php
+$steps = get_field('how_it_work');
+$step_number = 1;
+?>
+
 <div class="step-container">
     <div class="header-row">
         <h2>Как строится работа?</h2>
@@ -6,23 +11,17 @@
     
     <div class="how-it-works">
         <div class="steps">
-            <?php
-            $steps = array(
-                '1' => 'Определяем цели проекта',
-                '2' => 'Собираем требования и перекладываем их на систему',
-                '3' => 'Автоматизируем требования на платформе',
-                '4' => 'Проводим приемо-сдаточные испытания силами вашей рабочей группы',
-                '5' => 'Готовимся ко внедрению и адаптируем ваших пользователей',
-                '6' => 'Выходим в опытно-промышленную эксплуатацию',
-            );
-            
-            foreach ($steps as $title => $desc) {
-                echo '<div class="step">';
-                echo '<div class="step-number">' . esc_html($title) . '</div>';
-                echo '<p>' . esc_html($desc) . '</p>';
-                echo '</div>';
-            }
-            ?>
+            <?php if ($steps && is_array($steps)) : ?>
+                <?php foreach ($steps as $step) : ?>
+                    <?php if (!empty($step['how_it_work_step'])) : ?>
+                        <div class="step">
+                            <div class="step-number"><?php echo esc_html($step_number); ?></div>
+                            <p><?php echo esc_html($step['how_it_work_step']); ?></p>
+                        </div>
+                        <?php $step_number++; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
         <a href="#" class="mobile-read-more">Подробнее - читайте наши кейсы</a>
     </div>
