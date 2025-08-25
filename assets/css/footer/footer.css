@@ -51,7 +51,6 @@
 .footer-address-links-block {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: flex-start;
     padding: 0;
 }
@@ -86,26 +85,28 @@
     flex-direction: row;
     column-gap: 15px;
     flex-shrink: 0;
+    margin-left: clamp(50px, 4vw, 80px);
 }
 
 .footer-link-img {
     width: 40px;
     height: 40px;
     display: block;
+    border-radius: 50%;
 }
 
 .footer-email {
     font-family: Halvar Breitschrift, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: clamp(33px, 3vw, 115px);
-    line-height: 100%;
+    font-size: clamp(20px, 5vw, 115px);
+    line-height: 1;
     letter-spacing: 0;
     text-transform: uppercase;
     color: white;
     margin-top: 20px;
     max-width: 100%;
-    word-break: break-word;
+
 }
 
 
@@ -115,6 +116,9 @@
         flex-direction: column;
         align-items: flex-start;
         row-gap: 5px;
+    }
+    .footer-links-block{
+        margin-left: 0;
     }
 }
 
@@ -152,6 +156,9 @@
 
     .footer-email {
         font-size: clamp(25px, 4vw, 60px)
+    }
+    .footer-links-block{
+        margin-left: 0;
     }
 }
 
@@ -259,6 +266,9 @@
         display: flex;
         flex-direction: column;
         row-gap: 35px;
+    }
+    .footer-links-block{
+        margin-left: 0;
     }
 }
 

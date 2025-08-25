@@ -168,6 +168,9 @@
 }
 
 @media (max-width: 660px) {
+    .header.scrolled {
+        top: 0;
+    }
     .header-navbar {
         display: none;
     }
@@ -179,8 +182,8 @@
     }
 
     .header-menu-item {
-        display: block; /* вместо inline-block */
-        width: 100%;   /* растянуть по ширине */
+        display: block;
+        width: 100%;
     }
 
     .menu-submenu {

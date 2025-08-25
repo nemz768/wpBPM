@@ -6,7 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>  <?php bloginfo('name'); ?></title>
-      <?php wp_head(); ?>
+     <?php wp_head(); ?>
+
+    <meta name="description" content="Автоматизация, SRE, low-code, low-code для бизнеса, цифровизация, центр компетенций, база знаний">
+    <meta name="keywords" content="Автоматизация, SRE, low-code, low-code для бизнеса, цифровизация, центр компетенций, база знаний">
+    <meta name="copyright" content="ООО «Лаборатория БПМ»">
+    <!-- <meta name="robots" content="all"> -->
+
 </head>
 <body>
 <header class="header">
