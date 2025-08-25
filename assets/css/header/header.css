@@ -169,7 +169,9 @@
 }
 
 @media (max-width: 660px) {
-
+    .header.scrolled {
+        top: 0;
+    }
     .header-navbar {
         display: none;
     }
