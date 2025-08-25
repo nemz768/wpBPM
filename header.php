@@ -8,9 +8,12 @@
     <title>  <?php bloginfo('name'); ?></title>
      <?php wp_head(); ?>
 
+
+    <!--Основые настройки-->>
     <meta name="description" content="Автоматизация, SRE, low-code, low-code для бизнеса, цифровизация, центр компетенций, база знаний">
     <meta name="keywords" content="Автоматизация, SRE, low-code, low-code для бизнеса, цифровизация, центр компетенций, база знаний">
     <meta name="copyright" content="ООО «Лаборатория БПМ»">
+
     <!-- <meta name="robots" content="all"> -->
 
 </head>
