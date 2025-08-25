@@ -119,13 +119,13 @@
     position: absolute;
     top: 110%;
     left: 50%;
+    transform: translate(-50%, 10px);
     min-width: 220px;
     background-color: #222;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     padding: 10px 0;
     z-index: 1000;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none; /* чтобы не мешало */
@@ -136,7 +136,8 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
+    transform: translate(-50%, 0);
+
 }
 
 .submenu-list {
@@ -168,9 +169,7 @@
 }
 
 @media (max-width: 660px) {
-    .header.scrolled {
-        top: 0;
-    }
+
     .header-navbar {
         display: none;
     }
