@@ -5,28 +5,52 @@
         </div>
         <div class="get-content">
             <div class="you-get-text">
-                Дополнительно к внедренному решению, которое включает Функционал на платформе,
-                Документацию по решению и Техническую поддержку, вы также получите:
+                <?php
+                   $field = get_field("you-get-explanation");
+                        if ($field):
+                       echo esc_html($field);
+                        endif;
+                ?>
             </div>
             
+            <?php
+            $blocks = get_field('you-get-blocks');
+            if ($blocks && is_array($blocks)) {
+                $total_blocks = count($blocks);
+                foreach ($blocks as $index => $block) {
+                    if (!empty($block['you-get-header']) && !empty($block['you-get-image'])) {
+            ?>
             <div class="benefit-item">
-                <h3>Центр компетенций</h3>
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blocks/you-get-1.png" alt="Центр компетенций">
-                <ul>
-                    <li>
-                        Соберете свою базу знаний: регламенты, стандарты качества и прочие полезные материалы</li>
-                    <li>По итогам проекта сформируете Базу скриптов: сможете дорабатывать и накапливать знания и после обучения</li>
-                </ul>
+                <div class="benefit-line"></div>
+                
+                <div class="benefit-content">
+                    <div class="benefit-left">
+                        <h3><?php echo esc_html($block['you-get-header']); ?></h3>
+                        <img src="<?php echo esc_url($block['you-get-image']); ?>" alt="<?php echo esc_attr($block['you-get-header']); ?>">
+                    </div>
+                    
+                    <?php if (!empty($block['you-get-points']) && is_array($block['you-get-points'])) : ?>
+                    <div class="benefit-right">
+                        <ul>
+                            <?php foreach ($block['you-get-points'] as $point) : ?>
+                                <?php if (!empty($point['you-get-point'])) : ?>
+                                <li><?php echo esc_html($point['you-get-point']); ?></li>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <?php endif; ?>
+                </div>
+                
+                <?php if ($index === $total_blocks - 1): ?>
+                <div class="benefit-line"></div>
+                <?php endif; ?>
             </div>
-            
-            <div class="benefit-item">
-                <h3>Бесценный опыт</h3>
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blocks/you-get-2.png" alt="Бесценный опыт">
-                <ul>
-                    <li>Возможность обмена опытом с практикующими специалистами компании - интегратора с опытом 10+ лет во внедрении и более чем 80 проектов внедрения</li>
-                    <li>Новый профессиональный опыт для ваших сотрудников</li>
-                </ul>
-            </div>
+            <?php
+                    }
+                }
+            }
+            ?>
         </div>
     </div>
 </div>
