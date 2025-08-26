@@ -42,17 +42,6 @@
     max-width: 100%;
     margin-top: 50px;
     counter-reset: item;
-    /* border-radius: 20px;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.17),
-        rgba(255, 255, 255, 0.25),
-        rgba(255, 255, 255, 0.17));
-    border: 1px solid #fff;
-    box-shadow: 
-        inset 0 0 0 1px rgba(255, 255, 255, 0.1); 
-    margin-top: 50px;
-    align-items: start; */
 }
 
 .reasons div + div { 
@@ -72,22 +61,10 @@
         rgba(255, 255, 255, 0.17));
     border: 1px solid #fff;
     box-shadow: 
-        inset 0 0 0 1px rgba(255, 255, 255, 0.1); 
+        inset 10 10 0 1px rgba(255, 255, 255, 0.1); 
     margin-top: 50px;
     align-items: start;
 }
-
-
-/* .reasons .block-hide {
-    position: relative;
-    z-index: 2;
-    border: 1px solid #fff;
-    box-shadow: 
-        inset 0 0 0 0px rgba(255, 255, 255, 0); 
-    border-radius: 20px;
-    height: 250px;
-    width: 850px;
-} */
 
 .reasons .block-show:nth-child(odd) {
     margin-left: auto;
