@@ -102,6 +102,12 @@
     opacity: 0.6;
 }
 
+@media (min-width: 1400px) {
+    .get-content {
+        margin-left: 40px;
+    }
+}
+
 @media (max-width: 1000px) {
     .get-wrapper {
         flex-direction: column;
