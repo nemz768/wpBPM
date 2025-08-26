@@ -1,0 +1,89 @@
+    .logo-img {
+        width: 140px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .logo-img img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .yslugi-component-body-logos img {
+        width: 349px;
+        height: 140px;
+        /* angle: 0 deg; */
+        opacity: 1;
+        top: 285px;
+        left: 660px;
+        border-width: 1px;
+        border-radius: 20px;
+    }
+
+    .yslugi-component-body-logos {
+        display: flex;
+        gap: 7px; /* Расстояние между логотипами */
+    }
+
+    .yslugi-component {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /* заголовок вкладки */
+    .component-header {
+        flex: 1 1;
+        font-size: 20px;
+        color: white;
+        font-weight: 400;
+        font-style: normal;
+        size: 25px;
+        vertical-align: middle;
+        line-height: 100%;
+        width: 400px;
+        align-self: baseline; /* Выравниваем по базовой линии */
+        padding-top: 0.4em; /* Микро-корректировка положения */
+    }
+
+    .yslugi-component-body {
+        flex: 2 2;
+    }
+
+    /* заголовок */
+    .yslugi-component-title {
+        font-family: "Inter", sans-serif;
+        color: white;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 5px; /* Отступ после заголовка */
+    }
+
+    /* основной текст */
+    .yslugi-service-text {
+        font-family: "Share Tech Mono", monospace;
+        color: white;
+        font-weight: 400;
+        font-style: normal;
+        size: 25px;
+        vertical-align: middle;
+        line-height: 100%;
+        width: 400px;
+        margin-bottom: 30px; /* Отступ после описания */
+    }
+
+    .yslugi-component-title h1 {
+        size: 50px;
+        color: white;
+        margin: 0; /* Убираем стандартные отступы у заголовка */
+        line-height: 1.2; /* Устанавливаем межстрочный интервал */
+    }
