@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+
 .conteiner_advantage {
     margin-top: 100px;
 }
 
 .conteiner_advantage h2 {
-    font-family: 'Halvar Breitschrift', sans-serif ;
+    font-family: 'Rajdhani', sans-serif ;
     color: #fff;
     font-size: 20px;
     margin-left: 50px;
@@ -18,7 +21,7 @@
 }
 
 .why h1 {
-    font-family: 'Halvar Breitschrift', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 50px;
     text-transform: uppercase;
     font-weight: 800;
@@ -73,7 +76,7 @@
 }
 
 .block-show h3 {
-    font-family: 'Halvar Breitschrift', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 40px;
     color: #6A7EAC;
     text-transform: uppercase;
@@ -111,7 +114,7 @@
     opacity: 0.2;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Halvar Breitschrift', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     margin: 20px;
     font-size: 60px;
     font-weight: 800;
