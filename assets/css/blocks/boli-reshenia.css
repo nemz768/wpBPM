@@ -1,40 +1,41 @@
+.content-boli{
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    padding: 20px 0;
+}
+
+.section-title {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-left: 50px;
+    flex: 1 1;
+    font-style: normal;
+    vertical-align: middle;
+    width: 400px;
+    align-self: baseline;
+}
+
 .container {
     max-width: 1841px;
-    margin: 0 auto;
 }
-
 
 .pains-section {
-    background: rgba(22, 26, 35, 0.7);
-    border-radius: 20px;
-    padding: 50px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffffff20;
+    border-right: none;
+    border-left: none;
+    margin: 0 50px;
 }
 
-.section-header {
-    font-size: 28px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #99aafc;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    margin: 40px 0;
-}
-
-/* Аккордеон */
 .accordion {
     margin-top: 30px;
 }
 
 .accordion-item {
-    background: rgba(51, 56, 66, 0.5);
     border-radius: 12px;
     margin-bottom: 20px;
     overflow: hidden;
