@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html <?php language_attributes();?>>
 <head>
     <meta charset="<?php bloginfo('charset')?>">
     <meta name="viewport"
@@ -8,7 +8,7 @@
     <title>  <?php bloginfo('name'); ?></title>
 
 
-    <!--Основые настройки -->>
+    <!--Основные настройки -->
     <meta name="description" content="Автоматизация, SRE, low-code, low-code для бизнеса, цифровизация, центр компетенций, база знаний">
     <meta name="keywords" content="Автоматизация, SRE, low-code, low-code для бизнеса, цифровизация, центр компетенций, база знаний">
     <meta name="copyright" content="ООО «Лаборатория БПМ»">

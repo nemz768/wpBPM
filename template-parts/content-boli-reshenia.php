@@ -6,7 +6,7 @@
         
         <div class="accordion">
             <!-- Вопрос 1 -->
-            <div class="accordion-item active">
+            <div class="accordion-item">
                 <div class="accordion-header">
                     <span>ПЛАНИРУЕТЕ АВТОМАТИЗИРОВАТЬ ПРОЦЕССЫ С ПОМОЩЬЮ LOW-CODE ПЛАТФОРМЫ?</span>
                     <div class="accordion-icon"></div>

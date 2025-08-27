@@ -1,9 +1,9 @@
 .container {
-    max-width: 1200px;
+    max-width: 1841px;
     margin: 0 auto;
 }
 
-/* Стили для секции "Боли и решения" */
+
 .pains-section {
     background: rgba(22, 26, 35, 0.7);
     border-radius: 20px;
@@ -127,23 +127,20 @@
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-    
+
     .pains-section {
         padding: 30px 20px;
     }
-    
+
     .section-header {
         font-size: 24px;
     }
-    
+
     .accordion-header {
         padding: 20px;
         font-size: 16px;
     }
-    
+
     .accordion-body {
         padding: 0 20px 20px;
     }
