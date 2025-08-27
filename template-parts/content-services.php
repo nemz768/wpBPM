@@ -15,7 +15,7 @@
 
         <div class="yslugi-component-body-logos">
             <div class="logo-img">
-                <img src="img/ELMA365.png" alt="логотип ELMA365">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blocks/ELMA365.png" alt="логотип ELMA365">
             </div>
 
             <div class="logo-img">
@@ -23,7 +23,7 @@
             </div>
             
             <div class="logo-img">
-                <img src="img/nocode.png" alt="логотип nocode.ru">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blocks/nocode.png" alt="логотип nocode.ru">
             </div>
             
         </div>
