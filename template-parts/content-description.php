@@ -18,6 +18,7 @@
         width: 400px;
         align-self: baseline;
         padding-top: 0.4em;
+        margin-top: 60px;
     }
 
     .description-body {
@@ -27,6 +28,7 @@
         max-width: 1112px;
         margin: 0 auto; /* Центрируем контейнер на странице */
         padding: 0 20px; /* Добавляем отступы по бокам */
+        margin-top: 60px;
     }
 
     .description-after-photo {
@@ -74,6 +76,7 @@
         line-height: 100%;
         text-transform: uppercase;
         align-self: baseline;
+        margin-bottom: 30px;
     }
 
     .description-body p {
@@ -85,6 +88,7 @@
         line-height: 120%;
         letter-spacing: -0.04em; /* Исправлено: было -4% */
         vertical-align: middle;
+        margin-bottom: 30px;
     }
 
     .description-button button {
@@ -117,13 +121,14 @@
         margin-top: 30px;
     }
 
-    .description-header,
+    /* .description-header,
     .description-body,
     .description-body-photo,
     .description-bottom-section {
-        width: 100%; /* Заставляем все блоки занимать всю ширину контейнера */
-        text-align: left; /* Выравниваем текст по левому краю */
-    }   
+    width: 100%; /* Заставляем все блоки занимать всю ширину контейнера */
+    /* text-align: left; /* Выравниваем текст по левому краю */
+    /* }    */
+
 </style>
 
 <div class="content-description">
@@ -139,11 +144,31 @@
 
     <div class="description-body-photo">
         <div class="description-photo">
-            <marquee behavior="" direction="">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blocks/description-1.png" alt="1">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blocks/description-2.png" alt="2">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blocks/description-3.png" alt="3">
-            </marquee>
+            <div class="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blocks/description-1.png" alt="1">
+            </div>
+            <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blocks/description-2.png" alt="2">
+            </div>
+            <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blocks/description-3.png" alt="3">
+            </div>
+            <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blocks/description-4.png" alt="4">
+            </div>
+            <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blocks/description-5.png" alt="5">
+            </div>
+            <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blocks/description-6.png" alt="6">
+            </div>
+                
+                
+                
+                
+                 
+                
+            
             
         </div>
 
