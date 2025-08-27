@@ -1,0 +1,105 @@
+    .content-description {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+
+    .description-header {
+        font-family: 'Halvar Breitschrift', sans-serif;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-left: 50px;
+        flex: 1 1;
+        font-style: normal;
+        vertical-align: middle;
+        width: 400px;
+        align-self: baseline; /* Выравниваем по базовой линии */
+        padding-top: 0.4em; /* Микро-корректировка положения */
+    }
+
+    .description-body {
+        flex: 2 2;
+    }
+
+    .description-photo img {
+        width: 599px;
+        height: 348px;
+        opacity: 1;
+        top: 3367px;
+        left: 661px;
+        border-radius: 10px;
+    }
+
+    .content-description p {
+        font-family: "Share Tech Mono", monospace;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 120%;
+        vertical-align: middle;
+
+    }
+
+    .content-description h2 {
+        font-family: 'Halvar Breitschrift', sans-serif;
+        width: 1112px;
+        height: 150px;
+        color: #ffffffff;
+        opacity: 1;
+        top: 3139px;
+        left: 661px;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 50px;
+        line-height: 100%;
+        text-transform: uppercase;
+        align-self: baseline;
+    }
+
+    .description-body p {
+        width: 600px;
+        height: 38px;
+        opacity: 1;
+        top: 3309px;
+        left: 660px;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 120%;
+        vertical-align: middle;
+    }
+
+    .content-description p {
+        font-family: "Share Tech Mono", monospace;
+    }
+
+    .description-after-photo{
+        width: 600px;
+        height: 76px;
+        opacity: 1;
+        top: 3735px;
+        left: 661px;
+        font-family: "Share Tech Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 120%;
+        vertical-align: middle;
+    }
+
+    .description-button button {
+        background-color: #1F2CBE;
+        font-family: "Share Tech Mono", monospace;
+        width: 600px;
+        height: 56px;
+        opacity: 1;
+        top: 3841px;
+        left: 661px;
+        border-radius: 10px;
+        padding: 20px;
+        gap: 30px;
+    }
