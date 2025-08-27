@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
-
 .get-container {
-    padding: 50px;
+    padding: 70px 40px 140px 40px;
 }
 
 .get-wrapper {
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .get-header {
@@ -26,8 +23,6 @@
     line-height: 100%;
     text-transform: uppercase;
     margin: 0;
-    position: sticky;
-    top: 20px;
 }
 
 .you-get-text {
@@ -40,6 +35,7 @@
     margin-bottom: 40px;
     max-width: 1100px;
 }
+
 .get-container h3 {
     font-family: 'Share Tech Mono', monospace;
     color: #FFFFFF;
@@ -47,7 +43,6 @@
     font-size: 25px;
     line-height: 100%;
     letter-spacing: -0.04em;
-    margin-bottom: 20px;
 }
 
 .get-container ul {
@@ -58,27 +53,14 @@
     letter-spacing: -0.04em;
     line-height: 120%;
     padding-left: 20px;
-    margin-top: 20px;
 }
 
 .get-container img {
-    max-width: 100%;
+    max-width: 100%; 
     height: auto;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
-@media (max-width: 768px) {
-    .get-wrapper {
-        flex-direction: column;
-    }
-    .get-header,
-    .get-content {
-        max-width: 100%;
-    }
-    .you-get-text {
-        font-size: 30px;
-    }
-}
 .benefit-item {
     position: relative;
 }
@@ -120,14 +102,58 @@
     opacity: 0.6;
 }
 
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+    .get-wrapper {
+        flex-direction: column;
+    }
+    .get-header,
+    .get-content {
+        max-width: 100%;
+    }
     .benefit-content {
         gap: 20px;
     }
-    
     .benefit-line {
         width: 100%;
         max-width: 670px;
+    }
+}
+
+@media (max-width: 640px) {
+    .get-container {
+        padding: 0px 20px 50px 20px;
+    }
+    .you-get-text {
+        font-size: 30px;
+    }
+    .get-container h3 {
+        font-size: 18px;
+    }
+    .get-container ul {
+        font-size: 14px;
+    }
+    .get-container li {
+        padding-bottom: 10px;
+    }
+    .get-header {
+        width: 200px;
+    }
+    .you-get-text {
+        margin-bottom: 20px;
+    }
+    .get-container img {
+        max-width: 40%; 
+    }
+}
+
+@media (max-width: 360px) {
+    .get-container {
+        padding: 0px 10px 60px 10px;
+    }
+    .get-header {
+        width: 300px;
+    }
+    .get-container img {
+        max-width: 30%; 
     }
 }

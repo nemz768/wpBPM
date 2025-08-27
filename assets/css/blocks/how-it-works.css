@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
 
 .step-container {
-    padding: 50px;
+    padding: 30px 40px 90px 40px;
 }
 
 .how-it-works, .header-row h2 {
@@ -52,7 +52,7 @@
 .how-it-works .steps::after {
     content: '';
     position: absolute;
-    left: -10px;
+    left: 0;
     right: 0;
     top: 40px;
     height: 2px;
@@ -80,7 +80,6 @@
     z-index: 2;
 }
 
-/* Базовые стили для кружков */
 .how-it-works .step-number {
     width: 81px;
     height: 81px;
@@ -133,13 +132,13 @@
     line-height: 100%;
 }
 
-@media (max-width: 1500px) {
-    .step-container {
-        padding: 40px;
+@media (min-width: 1450px) {
+    .how-it-works .step {
+        left: 30px;
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
     .how-it-works .steps {
         flex-direction: column;
         gap: 30px;
@@ -199,7 +198,7 @@
 
 @media (max-width: 640px) {
     .step-container {
-        padding: 10px;
+        padding: 80px 10px 80px 10px;
     }
     .how-it-works .step p {
         font-size: 18px;
@@ -215,7 +214,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 2 0px;
     }
     .header-row .read-more {
         display: none; 
@@ -223,7 +222,6 @@
     .how-it-works::after {
         content: '';
         display: block;
-        margin-top: 40px;
     }
     .mobile-read-more {
         display: block;
@@ -236,5 +234,10 @@
         text-align: center;
         margin-top: 20px;
         width: 100%;
+    }
+}
+@media (max-width: 360px) {
+    .step-container {
+        padding: 70px 10px 70px 10px;
     }
 }
