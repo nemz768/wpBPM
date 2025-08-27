@@ -1,58 +1,55 @@
-<div class="container">
-    <section class="pains-section">
-        <h2 class="section-header">Боли и решения</h2>
-        
-        <div class="divider"></div>
-        
-        <div class="accordion">
-            <!-- Вопрос 1 -->
-            <div class="accordion-item active">
-                <div class="accordion-header">
-                    <span>ПЛАНИРУЕТЕ АВТОМАТИЗИРОВАТЬ ПРОЦЕССЫ С ПОМОЩЬЮ LOW-CODE ПЛАТФОРМЫ?</span>
-                    <div class="accordion-icon"></div>
-                </div>
-                <div class="accordion-content">
-                    <div class="accordion-body">
-                        <p><strong>CRM:</strong> У всех low-код платформ есть стандартные решения для CRM. Адаптируем его под ваши процессы и научим выполнять доработки самостоятельно.</p>
-                        
-                        <p><strong>HR-ПРОЦЕССЫ:</strong> На базе систем можно создавать решения для работы с сотрудниками, а также корпоративные порталы. В ряде платформ предусмотрены стандартные решения для службы HR.</p>
-                        
-                        <p><strong>АВТОМАТИЗИРОВАТЬ РАБОТУ СЛУЖБЫ ПОДДЕРЖКИ:</strong> Платформы позволяют создавать порталы для взаимодействия с внешними пользователями и поддерживают оргструктуру. Организовать коммуникацию не составит труда.</p>
-                        
-                        <p><strong>ДОКУМЕНТООБОРОТ:</strong> В большинстве платформ предусмотрено создание бизнес-процессов. Можно автоматизировать любую цепочку согласования.</p>
-                        
-                        <p><strong>ЛЮБЫЕ ПРОЦЕССЫ КОМПАНИИ:</strong> Low-code платформа - это инструмент, с помощью которого можно автоматизировать любые процессы компании.</p>
+<div class="content-boli">
+    <h2 class="section-title">Боли и решения</h2>
+    <section class="pains-section container">
+
+        <?php if ( have_rows('pains_and_solutions_header_1') ): ?>
+            <div class="accordion">
+                <?php while ( have_rows('pains_and_solutions_header_1') ): the_row(); ?>
+                    <?php
+                        $logo     = get_sub_field('pains_and_solutions_logo');
+                        $header   = get_sub_field('decryption_header');
+                        $subtitle = get_sub_field('descryption-subtitle');
+                    ?>
+
+                    <div class="accordion-item">
+                       <div class="accordion-header">
+                           <div class="accordion-header-logo-block">
+                                       <?php if ($header): ?>
+                                        <span class="accordion-title"><?php echo esc_html($header); ?></span>
+                                       <?php endif; ?>
+                                                                  <?php if ($logo): ?>
+                                                                      <img class="accordion-logo" src="<?php echo esc_url($logo); ?>" alt="">
+                                         <?php endif; ?>
+                           </div>
+                                     <div class="accordion-header-text">
+                                     <?php if ($subtitle): ?>
+                                 <span class="accordion-subtitle"><?php echo wp_kses_post($subtitle);?></span>
+                                   <?php endif; ?>
+                               </div>
+
+
+                         <div class="accordion-icon"></div>
+                       </div>
+
+
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <?php if ( have_rows('points') ): ?>
+                                    <?php while ( have_rows('points') ): the_row(); ?>
+                                        <p>
+                                            <?php if ( get_sub_field('point_header') ): ?>
+                                                <strong><?php the_sub_field('point_header'); ?>:</strong>
+                                            <?php endif; ?>
+                                            <?php the_sub_field('point_description'); ?>
+                                        </p>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                <?php endwhile; ?>
             </div>
-            
-            <!-- Вопрос 2 -->
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>САМОСТОЯТЕЛЬНАЯ НАСТРОЙКА</span>
-                    <div class="accordion-icon"></div>
-                </div>
-                <div class="accordion-content">
-                    <div class="accordion-body">
-                        <p>Мы предоставляем инструменты и обучение для самостоятельной настройки платформы под ваши нужды. Наша система интуитивно понятна и не требует глубоких технических знаний.</p>
-                        <p>Доступны онлайн-курсы, видеоуроки и документация для быстрого освоения платформы. Наша техническая поддержка всегда готова ответить на ваши вопросы.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Вопрос 3 -->
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>УЖЕ ВНЕДРЕНА LOW-CODE ПЛАТФОРМА</span>
-                    <div class="accordion-icon"></div>
-                </div>
-                <div class="accordion-content">
-                    <div class="accordion-body">
-                        <p>Если у вас уже внедрена low-code платформа, мы предлагаем услуги по её оптимизации, доработке и расширению функционала.</p>
-                        <p>Наши эксперты проведут аудит вашей текущей системы, предложат решения для улучшения производительности и помогут реализовать новые бизнес-процессы.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php endif; ?>
+
     </section>
 </div>

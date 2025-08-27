@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const accordionItems = document.querySelectorAll('.accordion-item');
     
-    // Открываем первый элемент по умолчанию
-    accordionItems[0].classList.add('active');
-    accordionItems[0].querySelector('.accordion-content').style.maxHeight = accordionItems[0].querySelector('.accordion-content').scrollHeight + 'px';
-    
+
     // Добавляем обработчики клика
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
