@@ -72,6 +72,16 @@
      endif;
      ?>
 
+            <?php
+             if ($copyright):
+                ?>
+                <p class="footer-rules-subtitle-mobile"><?php echo esc_html($copyright);?></p>
+
+                <?php
+                endif;
+
+                ?>
+
  </footer>
 
 </body>

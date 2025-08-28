@@ -137,6 +137,7 @@
     margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
 .component-boli-header {
     font-family: 'Halvar Breitschrift', sans-serif;
     color: #fff;
@@ -154,3 +155,34 @@
     margin-bottom: 20px;
     margin-left: 40px;
 }
+=======
+    .component-boli-header {
+        font-family: 'Halvar Breitschrift', sans-serif;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 100%;
+        text-transform: uppercase;
+        flex: 1 1;
+        vertical-align: middle;
+        width: 200px;
+        max-width: 100%;
+        align-self: baseline;
+        padding-top: 0.4em;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+
+    }
+
+
+    @media (max-width: 640px) {
+        .sub-block-head {
+            display: none;
+        }
+        .sub-block-chek {
+            height: 100%;
+            max-height: 170px;
+        }
+    }
+>>>>>>> 9f54adff0ed463b5d7de916980589505243a83bf

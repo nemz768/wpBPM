@@ -10,7 +10,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 40px 40px;
     min-height: 100vh;
 
 }
@@ -23,7 +23,7 @@
 }
 
 .hero-title {
-    font-family: Halvar Breitschrift, sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: clamp(50px, 8vw, 120px);

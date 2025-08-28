@@ -16,7 +16,7 @@
     margin-left: 50px;
 }
 
-/* Сетка для карточек */
+
 .about_us_in_numbers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -26,7 +26,6 @@
     width: 100%;
 }
 
-/* блоки карточек */
 .number_block {
     width: 550px;
 }
