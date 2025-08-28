@@ -305,8 +305,8 @@
     }
 }
 
-/* Адаптация для планшетов и небольших экранов (640px) */
-@media (max-width: 640px) {
+
+@media (max-width: 1100px) {
     .content-description {
         flex-direction: column;
         padding: 0 20px;
