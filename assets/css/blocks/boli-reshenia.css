@@ -156,3 +156,14 @@
         margin-left: 40px;
 
     }
+
+
+    @media (max-width: 640px) {
+        .sub-block-head {
+            display: none;
+        }
+        .sub-block-chek {
+            height: 100%;
+            max-height: 170px;
+        }
+    }

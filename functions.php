@@ -1,11 +1,6 @@
 
 <?php
 
-
-
-
-
-
 add_theme_support('title-tag');
 
 function wpBPM_enqueue_scripts() {
