@@ -3,12 +3,13 @@
 
 .conteiner_advantage {
     margin-top: 100px;
+    margin-left: 50px;
 }
 
 .conteiner_advantage h2 {
     font-family: 'Rajdhani', sans-serif ;
     color: #fff;
-    font-size: 20px;
+    font-size: calc(15px + 5 * (100vw / 1920));
     margin-left: 50px;
     font-weight: 800;
     line-height: 100%;
@@ -22,7 +23,7 @@
 
 .why h1 {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 50px;
+    font-size: calc(40px + 10 * (100vw / 1920));
     text-transform: uppercase;
     font-weight: 800;
     width: 900px;
@@ -30,7 +31,7 @@
 
 .why h4 {
     font-family: 'Share Tech Mono', sans-serif;
-    font-size: 16px;
+    font-size: calc(14px + 2 * (100vw / 1920));
     font-weight: 400;
     width: 500px;
 }
@@ -42,11 +43,13 @@
     max-width: 100%;
     margin-top: 50px;
     counter-reset: item;
+    gap: 20px;
 }
 
 .reasons div + div { 
     margin-top: -12px;
 }
+
 
 .block-show {
     display: grid;
@@ -61,22 +64,23 @@
         rgba(255, 255, 255, 0.17));
     border: 1px solid #fff;
     box-shadow: 
-        inset 10 10 0 1px rgba(255, 255, 255, 0.1); 
-    margin-top: 50px;
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1); 
+    margin-top: 0;
     align-items: start;
+    box-sizing: border-box;
 }
 
 .reasons .block-show:nth-child(odd) {
-    margin-left: auto;
+    margin-left: 0;
 }
 
 .reasons .block-show:nth-child(even) {
-    margin-right: auto; 
+    margin-right: 0; 
 }
 
 .block-show h3 {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 40px;
+    font-size: calc(30px + 10 * (100vw / 1920));
     color: #6A7EAC;
     text-transform: uppercase;
     font-weight: 800;
@@ -88,7 +92,7 @@
 
 .block-show h4 {
     font-family: 'Share Tech Mono', sans-serif;
-    font-size: 16px;
+    font-size: calc(14px + 2 * (100vw / 1920));
     font-weight: 400;
     color: #fff;
     margin: 20px;
@@ -115,7 +119,7 @@
     text-align: center;
     font-family: 'Rajdhani', sans-serif;
     margin: 20px;
-    font-size: 60px;
+    font-size: calc(50px + 10 * (100vw / 1920));
     font-weight: 800;
     line-height: 80%;
 }
@@ -126,7 +130,7 @@
     }
 
     .conteiner_advantage h2 {
-        font-size: 18px;
+        font-size: calc(10px + 8 * (100vw / 1920));
         margin-left: 25px;
     }
 
@@ -135,12 +139,12 @@
     }
 
     .why h1 {
-        font-size: 30px;
+        font-size: calc(20px + 10 * (100vw / 1920));
         max-width: 100%;
     }
 
     .why h4 {
-        font-size: 12px;
+        font-size: calc(10px + 2 * (100vw / 1920));
         max-width: 100%;
     }
 
@@ -158,25 +162,18 @@
     .block-show {
         margin-right: 10px;
         margin-left: 10px;
-        height: 10em;
-        width: 90%;
+        height: 11em;
+        width: 80%;
         grid-column: 1 !important;
     }
 
-    /* .block-show:nth-child(odd) {
-        margin-left: auto;
-    }
-
-    .block-show:nth-child(even) {
-        margin-right: auto; 
-    } */
 
     .block-show h3 {
-        font-size: 30px;
+        font-size: calc(20px + 10 * (100vw / 1920));
     }
 
     .block-show h4 {
-        font-size: 12px;
+        font-size: calc(12px + 2 * (100vw / 1920));
         margin: 15px;
     }
 
@@ -194,7 +191,7 @@
         float: right;
         display: block;
         content: counter(item, decimal-leading-zero) " "; 
-        font-size: 40px;
+        font-size: calc(35px + 5 * (100vw / 1920));
     }
 }
 
@@ -204,7 +201,7 @@
     }
 
     .conteiner_advantage h2 {
-        font-size: 15px;
+        font-size: calc(13px + 2 * (100vw / 1920));
         margin-left: 15px;
     }
 
@@ -213,12 +210,12 @@
     }
 
     .why h1 {
-        font-size: 18px;
+        font-size: calc(20px + 3 * (100vw / 1920));
         max-width: 100%;
     }
 
     .why h4 {
-        font-size: 10px;
+        font-size: 12px;
         max-width: 100%;
     }
 
@@ -241,21 +238,14 @@
         grid-column: 1 !important;
     }
 
-    /* .block-show:nth-child(odd) {
-        margin-left: auto;
-    }
-
-    .block-show:nth-child(even) {
-        margin-right: auto; 
-    } */
 
     .block-show h3 {
-        font-size: 25px;
+        font-size: calc(22px + 3 * (100vw / 1920));
     }
 
     .block-show h4 {
-        font-size: 10px;
-        margin: 12px;
+        font-size: calc(10px + 2 * (100vw / 1920));
+        margin-top: 8px;
     }
 
     .conteiner_advantage .reasons ol { 
@@ -272,6 +262,6 @@
         float: right;
         display: block;
         content: counter(item, decimal-leading-zero) " "; 
-        font-size: 25px;
+        font-size: calc(30px + 2 * (100vw / 1920));
     }
 }
