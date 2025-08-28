@@ -44,6 +44,7 @@
     /* заголовок вкладки "Услуги" */
     .component-header {
         font-family: 'Halvar Breitschrift', sans-serif;
+        width: 100%;
         color: #fff;
         font-size: 20px;
         font-weight: 800;
@@ -58,6 +59,7 @@
         width: 400px;
         align-self: baseline; /* Выравниваем по базовой линии */
         padding-top: 0.4em; /* Микро-корректировка положения */
+        
     }
 
     .yslugi-component-body {
@@ -65,13 +67,26 @@
     }
 
     /* заголовок */
-    .yslugi-component-title {
-        font-family: "Inter", sans-serif;
+    .yslugi-component-title h2 {
+        /* font-family: 'Halvar Breitschrift', sans-serif;
+        width: 100%;
         color: white;
         font-optical-sizing: auto;
         font-weight: bold;
         font-style: normal;
-        margin-bottom: 15px; /* Отступ после заголовка */
+        margin-bottom: 15px; Отступ после заголовка */
+        font-family: 'Halvar Breitschrift', sans-serif;
+        width: 100%;
+        height: 150px;
+        color: #ffffff; 
+        font-weight: 800;
+        font-style: normal;
+        font-size: 50px;
+        line-height: 100%;
+        text-transform: uppercase;
+        align-self: baseline;
+        margin: unset;
+        margin-bottom: 30px;
     }
 
     /* основной текст */
