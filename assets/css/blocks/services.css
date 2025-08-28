@@ -108,3 +108,52 @@
         margin: 0; /* Убираем стандартные отступы у заголовка */
         line-height: 1.2; /* Устанавливаем межстрочный интервал */
     }
+
+
+
+    @media (max-width: 360px) {
+        .yslugi-component {
+            flex-direction: column;
+            padding: 0 15px;
+        }
+
+        .component-header {
+            margin-left: 0;
+            text-align: center;
+            font-size: 18px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .yslugi-component-title h2 {
+            font-size: 24px;
+            height: auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .yslugi-service-text {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .yslugi-component-body-logos {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 100%;
+            max-width: 280px;
+            height: 100px;
+        }
+
+        .yslugi-component-body-logos img {
+            width: 100%;
+            height: auto;
+            max-height: 80px;
+            object-fit: contain;
+        }
+    }

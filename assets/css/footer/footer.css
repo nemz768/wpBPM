@@ -109,6 +109,17 @@
 
 }
 
+.footer-rules-subtitle-mobile {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    display: none;
+    padding-top: 30px;
+}
 
 
 @media (max-width: 1260px) {
@@ -270,5 +281,10 @@
     .footer-links-block{
         margin-left: 0;
     }
+    .footer-rules-subtitle-mobile{
+        display: block;
+    }
 }
+
+
 
