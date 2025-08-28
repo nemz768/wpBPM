@@ -30,7 +30,7 @@
 }
 
 .footer-rules-subtitle {
-    font-family: Halvar Breitschrift, sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 100%;
@@ -252,7 +252,7 @@
     
     .footer-rules-subtitle-mobile {
         display: block;
-        font-family: Halvar Breitschrift, sans-serif;
+        font-family: 'Rajdhani', sans-serif;
         font-weight: 300;
         font-size: 14px;
         line-height: 100%;
