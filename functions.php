@@ -12,8 +12,9 @@ function wpBPM_enqueue_scripts() {
      wp_enqueue_style('style-css', get_stylesheet_uri());
      wp_enqueue_style('header-css', get_stylesheet_directory_uri() . '/assets/css/header/header.css');
      wp_enqueue_style('services-css', get_stylesheet_directory_uri() . '/assets/css/blocks/services.css');
+     wp_enqueue_style('boli-reshenia-css', get_stylesheet_directory_uri() . '/assets/css/blocks/boli-reshenia.css');
      wp_enqueue_style('description-css', get_stylesheet_directory_uri() . '/assets/css/blocks/description.css');
-     wp_enqueue_style('about-us-in-numbers-css', get_stylesheet_directory_uri() . '/assets/css/blocks/about-us-in-numbers.css');
+               wp_enqueue_style('about-us-in-numbers-css', get_stylesheet_directory_uri() . '/assets/css/blocks/about-us-in-numbers.css');
      wp_enqueue_style('advantages-css',get_stylesheet_directory_uri() . '/assets/css/blocks/advantages.css');
      wp_enqueue_style('quote-css',get_stylesheet_directory_uri() . '/assets/css/blocks/quote.css');
      wp_enqueue_style(
