@@ -1,235 +1,188 @@
-.content-boli{
-    display: flex;
-    flex-direction: column;
-    row-gap: 60px;
-    padding: 20px 0;
-}
-
-.section-title {
-    font-family: 'Halvar Breitschrift', sans-serif;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 100%;
-    text-transform: uppercase;
-    margin-left: 50px;
-    flex: 1 1;
-    font-style: normal;
-    vertical-align: middle;
-    width: 400px;
-    align-self: baseline;
-}
-
-
-.container {
-    max-width: 1841px;
-}
-
-.pains-section {
-    margin: 0 50px;
-}
-
-.accordion {
-    margin-top: 30px;
-}
-
-.accordion-item {
-    margin-bottom: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    border-right: none;
-    border-left: none;
-}
-
-.accordion-header {
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    transition: background-color 0.3s ease;
-}
-.accordion-header-logo-block {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-.accordion-header-logo-block-title {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-.accordion-header-text {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-
-.accordion-logo {
-    max-width: 90px;
-
-}
-
-
-.accordion-title {
-    font-family: Halvar Breitschrift, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: white;
-}
-
-.accordion-subtitle {
-    font-family: Halvar Breitschrift, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: clamp(10px, 4vw, 25px);
-    line-height: 100%;
-    text-transform: uppercase;
-    color: white;
-    flex-wrap: wrap;
-    white-space: pre-line;
-
-
-}
-
-
-
-.accordion-icon {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-.accordion-icon::before,
-.accordion-icon::after {
-    content: '';
-    position: absolute;
-    background-color: #99aafc;
-    transition: all 0.3s ease;
-}
-.accordion-icon::before {
+.component {
     width: 100%;
-    height: 2px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-.accordion-icon::after {
-    width: 2px;
     height: 100%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
 }
-.accordion-item.active .accordion-icon::after {
-    transform: translateX(-50%) rotate(90deg);
-    opacity: 0;
-}
-.accordion-content {
+
+.sub-block {
     display: flex;
-    flex-direction: column;
-    max-height: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.component button {
+    background-color: unset; 
+    border: unset;
+    width: 20px;
+}
+
+.sub-block-hide {
+    /* background-color: red; */
+    flex: 1 1;
+    /* min-height: 250px; */
+    /* border: 1px solid black; */
+    height: 150px; 
     overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.3s ease;
-}
-.accordion-item.active .accordion-content {
-    max-height: 1000px;
-}
-.accordion-body {
+    transition: height 0.3s ease-in-out;
     display: flex;
-    flex-direction: column;
-    padding: 0 25px 25px;
-    color: #e0e0e0;
-    line-height: 1.7;
-    align-items: flex-end;
-    justify-content: flex-end;
+    flex-direction: row;
+    gap: 20px;
+}
 
+.sub-block:nth-child(1) {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-left: unset;
 }
-.accordion-body p {
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 15px;
-    background: linear-gradient(90.14deg, rgba(255, 255, 255, 0.136) 0.42%, rgba(255, 255, 255, 0.2) 50.04%, rgba(255, 255, 255, 0.136) 99.66%);
-    position: relative;
-    font-family: Share Tech Mono, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 120%;
-    vertical-align: middle;
+
+.sub-block:nth-child(2) {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-right: unset;
+}
+
+.sub-block:nth-child(3) {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-left: unset;
+    padding: 10px;
+    /* margin: 10px; */
+}
+
+.sub-block-show {
+    /* background-color: blue; */
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex: 1 1;
+    /* min-height: 250px; */
+}
+
+.component {
+    padding:20px;
+    box-sizing: border-box;
+}
+
+.sub-block button {
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+    
+.sub-block-head {
+    flex: 1 1;
+    margin-left: 30px;
+}
+
+.sub-block-head h2 {
+    font-family: 'Halvar Breitschrift', sans-serif;
     color: white;
-    width: 50%;
-    text-wrap: wrap;
-
+    size: 20px;
 }
 
+.sub-block-head img {
+    margin-top: 10px;
+    margin-left: 20px;
+}
 
+.sub-block-body {
+    flex: 3 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
+.sub-block-body h2 {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    font-weight: 800;
+    color: white;
+    size: 50px;
+    width: 100%;
+    margin-left: 45px;
+}
 
-.accordion-body strong {
-    font-family: Share Tech Mono, monospace;
-    font-style: normal;
+.sub-block-chek {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: 45px;
+    height: 115px;
+    opacity: 1;
+    left: 660px;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 10px;
+    background-color: #ffffff2d;
+}
+
+.sub-block-text1 {
+    font-family: Share Tech Mono;
+    font-weight: 400px;
+    font-style: Regular;
     font-size: 18px;
     line-height: 100%;
+    letter-spacing: 0%;
     vertical-align: middle;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.sub-block-text2 {
+    font-family: Share Tech Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -4%;
+    vertical-align: middle;
+    color: white;
+    margin-bottom: 5px;
+}
+
+<<<<<<< HEAD
+.component-boli-header {
+    font-family: 'Halvar Breitschrift', sans-serif;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 100%;
     text-transform: uppercase;
-    font-weight: 600;
+    flex: 1 1;
+    vertical-align: middle;
+    width: 200px;
+    max-width: 100%;
+    align-self: baseline;
+    padding-top: 0.4em;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 40px;
 }
-@media (max-width: 960px) {
+=======
+    .component-boli-header {
+        font-family: 'Halvar Breitschrift', sans-serif;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 100%;
+        text-transform: uppercase;
+        flex: 1 1;
+        vertical-align: middle;
+        width: 200px;
+        max-width: 100%;
+        align-self: baseline;
+        padding-top: 0.4em;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        margin-left: 40px;
 
-    .accordion-header-logo-block {
-        display: none;
-    }
-    .accordion-header {
-        padding: 20px;
-        font-size: 16px;
-        justify-content: space-evenly;
-    }
-
-    .accordion-body {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .accordion-body p {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .pains-section {
-        padding: 30px 20px;
     }
 
-    .accordion-body {
-        align-items: center;
-        justify-content: center;
-    }
 
-    .accordion-body p {
-        width: 100%;
+    @media (max-width: 640px) {
+        .sub-block-head {
+            display: none;
+        }
+        .sub-block-chek {
+            height: 100%;
+            max-height: 170px;
+        }
     }
-
-    .section-header {
-
-        font-size: 24px;
-    }
-
-    .accordion-header {
-        padding: 20px;
-        font-size: 16px;
-        justify-content: space-evenly;
-    }
-
-    .accordion-body {
-        padding: 0 20px 20px;
-    }
-}
+>>>>>>> 9f54adff0ed463b5d7de916980589505243a83bf
